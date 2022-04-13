@@ -1,0 +1,59 @@
+//.html {
+//  background-color: azure;
+//}
+
+
+.body {
+  text-align: center;
+  max-width: 600px;
+}
+
+.container-1 {
+  position: relative;
+  
+  
+  .header {
+    background-color: azure;
+    width: 100%;
+    min-height: 20vh;
+    text-align: center;
+  }
+}
+
+.flex-container-2 {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  .body {
+    min-width: 15rem;
+  }
+  
+  .sidebar {
+    width: 100%;
+    
+    text-align: center;
+  }
+}
+
+//
+//.App-header {
+//  min-height: 100vh;
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: start;
+//}
+//
+//.App-link {
+//  color: #61dafb;
+//}
+//
+//@keyframes App-logo-spin {
+//  from {
+//    transform: rotate(0deg);
+//  }
+//  to {
+//    transform: rotate(360deg);
+//  }
+//}

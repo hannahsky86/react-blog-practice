@@ -1,19 +1,19 @@
-import {Routes, BrowserRouter, Switch, Route} from 'react-react-dom'
+import { Link } from "react-router-dom";
 
-export default () => {
+const Navigation = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route>
-                    <Home/>
-                    <Blog/>
-                    <Topics/>
-                    <Youtube/>
-                    <Portfolio/>
-                    <ContactMe/>
-                    
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    )
+        <div>
+            <li>
+                <Link to="/">Home</Link>
+            </li>
+            <li>
+                <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+                <Link to="/contact-me">Contact Me</Link>
+            </li>
+        </div>
+    );
 }
+
+export default Navigation;

@@ -8,28 +8,18 @@
   max-width: 600px;
 }
 .menu-button {
-  box-sizing: border-box;
-  display: inline-block;
   float: left;
-  height: 38px;
   padding: 0 15px;
   margin: .5rem;
   border-style: solid;
   border-width: 1px;
-  opacity: 1;
-  text-align: center;
   font-size: 12px;
   text-transform: uppercase;
   line-height: 35px;
-  white-space: nowrap;
   border-radius: 3px;
   transition: all 0.5s ease;
-  background: transparent;
   cursor: pointer;
-
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-
   border-color: #BFC8CD;
   color: #9EABB3;
 }
@@ -45,20 +35,6 @@
 .icon-menu:before {
   //content: "\f609";
 }
-
-//[class^="icon-"]:before, 
-//[class*=" icon-"]:before {
-//  font-family: "casper-icons", "Open Sans", sans-serif;
-//  speak: none;
-//  font-style: normal;
-//  font-weight: normal;
-//  font-variant: normal;
-//  text-transform: none;
-//  line-height: 1;
-//  text-decoration: none !important;
-//  -webkit-font-smoothing: antialiased;
-//  -moz-osx-font-smoothing: grayscale;
-//}
 
 .container-1 {
   position: relative;

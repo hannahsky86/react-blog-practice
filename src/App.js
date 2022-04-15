@@ -9,10 +9,24 @@ function App() {
   return (
     <div className="App">
         <div className="container-1">
+            {/*<button>Button</button>*/}
+            
+            <div>
+                <nav className="main-nav overlay clearfix">
+                    {/*<a className="blog-logo" */}
+                    {/*   href="https://blog.pragmaticengineer.com"><img*/}
+                    {/*    // src="https://blog.pragmaticengineer.com/content/images/2015/12/pragmatic-engineer-profile-image.png"*/}
+                    {/*    alt="Hannah's Dev Blog"/>*/}
+                    {/*</a>*/}
+                    <a className="menu-button icon-menu" href="#"><span className="word">Menu</span></a>
+                </nav>
+            </div>
+            
+            
             <header className="header">
                 <h1>Hannah's Dev Blog</h1>
-                <span>Written by Hannah Roach who codes all day ...and codes all night.</span>
-                {/*<span><a href="https://www.linkedin.com/in/hannahsky86/">Follow me on LinkedIn</a></span>*/}
+                <h2>Written by Hannah Roach who codes all day</h2>
+                <h2>...and codes all night</h2>
             </header>
         </div>
         <div className="flex-container-2">

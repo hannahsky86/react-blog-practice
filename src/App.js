@@ -6,9 +6,6 @@ import {BrowserRouter} from "react-router-dom";
 import {BuildRoutes} from "./general/build-routes";
 import * as Constants from "./general/constants";
 
-
-
-
 function App() {
     const [menuOpen, setMenuOpen] = useState(true);
     const [isMobile, setIsMobile] = useState(window.innerWidth<=Constants.MOBILE_WIN)
@@ -33,7 +30,6 @@ function App() {
                       <Navigation menuOpen={menuOpen} setMenuOpen={setMenuOpen} isMobile={isMobile}/>
                       <BuildRoutes />                      
                   </BrowserRouter>
-
               </div>
           </div>
       </div>

@@ -1,10 +1,11 @@
 import './scss/App.scss';
 import Navigation from './general/navigation'
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import Header from "./general/header";
 import {BrowserRouter} from "react-router-dom";
-import BuildRoutes from "./general/build-routes";
+import {BuildRoutes} from "./general/build-routes";
 import * as Constants from "./general/constants";
+
 
 
 
@@ -30,7 +31,7 @@ function App() {
               <div className="body">
                   <BrowserRouter>
                       <Navigation menuOpen={menuOpen} setMenuOpen={setMenuOpen} isMobile={isMobile}/>
-                      <BuildRoutes/>                      
+                      <BuildRoutes />                      
                   </BrowserRouter>
 
               </div>

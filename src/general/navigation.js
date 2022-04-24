@@ -1,40 +1,35 @@
-import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
-import Home from "../pages/home";
-import Blog from "../pages/blog";
-import ContactMe from "../pages/contact-me";
-import Header from "./header"
+import {Link} from "react-router-dom";
 
-const Navigation = ({drawerOpen, setDrawerOpen}) => {
+
+
+const Navigation = ({menuOpen, setMenuOpen, isMobile}) => {
+    const MOBILE_WIN = 900;
+    const navOpen = window.innerWidth >= MOBILE_WIN;
+    
     return (
-        // drawerOpen && 
-    <div>
-        {/*<Header/>*/}
-        <BrowserRouter>
-            <div id="nav-links">
+        <header>
+            <div id="nav-links" className="navigation">
+            { (!isMobile || menuOpen) &&
                 <ul>
                     <li>
-                        <Link to="/" onClick={() => setDrawerOpen(!drawerOpen)}>Home</Link>
+                        <Link to="/" 
+                              onClick={() => setMenuOpen(navOpen)}
+                        >Home</Link>
                     </li>
                     <li>
-                        <Link to="/blog" onClick={() => setDrawerOpen(!drawerOpen)}>Blog</Link>
+                        <Link to="/blog"
+                              onClick={() => setMenuOpen(navOpen)}
+                        >Blog</Link>
                     </li>
                     <li>
-                        <Link to="/contact-me" onClick={() => setDrawerOpen(!drawerOpen)}>Contact Me</Link>
+                        <Link to="/contact-me" 
+                              onClick={() => setMenuOpen(navOpen)}
+                        >Contact Me</Link>
                     </li>
-                </ul>
-            </div>
-            {/*<div className="sidebar">*/}
-            {/*    <Routes>*/}
-            {/*        <Route path="/" element={<Home />} />*/}
-            {/*        <Route path="/blog" element={<Blog />} />*/}
-            {/*        /!*<Route path="/" element={<Topics />} />*!/*/}
-            {/*        /!*<Route path="/" element={<Youtube />} />*!/*/}
-            {/*        /!*<Route path="/" element={<Portfolio />} />*!/*/}
-            {/*        <Route path="/contact-me" element={<ContactMe />} />*/}
-            {/*    </Routes>*/}
-            {/*</div>*/}
-        </BrowserRouter>
-    </div>
+                </ul> 
+            }  
+            </div>      
+        </header>
     );
 }
 

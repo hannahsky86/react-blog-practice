@@ -4,135 +4,139 @@
 }
 
 .body {
-  text-align: center;
-  max-width: 600px;
+  //text-align: center;
+  //max-width: 600px;
 }
 
-
-$font-color: #03045e; 
-$color1: #caf0f8;
-$color2: #90e0ef;
-$color3: #00b4d8;
-$color4: #0077b6;
-$color5: #03045e;
-$desktop: 860px;
-$mobile: 500px;
-$small-mobile: 400px;
-
-#menu-button {
-  padding:0;
-  margin: 1rem 0 1rem 1rem;
-  border-color:transparent;
-  background-color: transparent;
-}
-
-.menu-button {
-  float: left;
-  padding: 0 15px;
-  border: 1px solid $font-color;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 35px;
-  border-radius: 3px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-  text-decoration: none;
-  background-color: transparent;
-  color: $font-color;
-}
-
-.menu-button:before {
-  font-size: 12px;
-  font-weight: bold;
-  position: relative;
-  top: 1px;
-}
-
-.mobile-nav-button {
-  position: relative;
-  background-color: transparent;
-  width: 100%;
-  z-index: 3;
-}
-
-.dropdown-nav {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
+.flex-container {
+  display: flex;
+  flex-direction: column;
   
-  @media (min-width: $mobile){
-    width: 15rem;
-  }
-  
-  z-index: 2;
-  top: 0;
-  background-color: whitesmoke;
-
-}
-
-
-
-#nav-links > ul {
-  float: left;
-  padding: 0 0 2rem 0;
-  margin: 0;
-  position: absolute;
-  top: 6rem;
-  padding-inline-start: 2rem;
-  
-  @media (min-width: $desktop) {
-    top: 15rem;
-  }
-  
-  li {
-    list-style: none;
-    padding: .5rem 2rem .5rem 0;
-    
-    a {
-      font-size: 12px;
-      color: $font-color;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-    } 
-  }
-}
-
-.header {
-  color: #3A4145;
-  text-align: center;
-  padding: 1em;
-  overflow-wrap: anywhere;
-  background: aliceblue;
-  
-  h1 {
-    margin: 10px 0 10px 0;
-    font-size: 10vw;
-    font-weight: 700;
-    font-family: "Open Sans", sans-serif;
-  }
-  
-  p {
-    font-size: medium;
-  }
-}
-
-@media (min-width: $mobile) {
   .header {
-    padding: 3em;
-
-    h1 {
-      font-size: 3em;
-      letter-spacing: -2px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+  
+  .body {
+    display: flex;
+    flex-direction: row;
+    
+    .navigation {
+      justify-content: left;
+      min-width: 30rem;
     }
-
-    p {
-      font-size: large;
+    .routes {
+      justify-content: center;
     }
   }
+  
 }
+
+
+//
+//$font-color: #03045e; 
+//$color1: #caf0f8;
+//$color2: #90e0ef;
+//$color3: #00b4d8;
+//$color4: #0077b6;
+//$color5: #03045e;
+//$desktop: 860px;
+//$mobile: 500px;
+//$small-mobile: 400px;
+//
+//#menu-button {
+//  padding:0;
+//  margin: 1rem 0 1rem 1rem;
+//  border-color:transparent;
+//  background-color: transparent;
+//}
+//
+//.menu-button {
+//  float: left;
+//  padding: 0 15px;
+//  border: 1px solid $font-color;
+//  font-size: 12px;
+//  font-weight: bold;
+//  text-transform: uppercase;
+//  line-height: 35px;
+//  border-radius: 3px;
+//  transition: all 0.5s ease;
+//  cursor: pointer;
+//  text-decoration: none;
+//  background-color: transparent;
+//  color: $font-color;
+//}
+//
+//.menu-button:before {
+//  font-size: 12px;
+//  font-weight: bold;
+//  position: relative;
+//  top: 1px;
+//}
+//
+//.mobile-nav-button {
+//  position: relative;
+//  background-color: transparent;
+//  width: 100%;
+//  z-index: 3;
+//}
+//
+//.dropdown-nav {
+//  position: absolute;
+//  display: block;
+//  width: 100%;
+//  height: 100%;
+//  
+//  @media (min-width: $mobile){
+//    width: 15rem;
+//  }
+//  
+//  z-index: 2;
+//  top: 0;
+//  background-color: whitesmoke;
+//
+//}
+//
+//.routes {
+//  display: flex;
+//  justify-content: center;
+//}
+//
+//
+//.header {
+//  color: #3A4145;
+//  text-align: center;
+//  padding: 1em;
+//  overflow-wrap: anywhere;
+//  background: aliceblue;
+//  
+//  h1 {
+//    margin: 10px 0 10px 0;
+//    font-size: 10vw;
+//    font-weight: 700;
+//    font-family: "Open Sans", sans-serif;
+//  }
+//  
+//  p {
+//    font-size: medium;
+//  }
+//}
+//
+//@media (min-width: $mobile) {
+//  .header {
+//    padding: 3em;
+//
+//    h1 {
+//      font-size: 3em;
+//      letter-spacing: -2px;
+//    }
+//
+//    p {
+//      font-size: large;
+//    }
+//  }
+//}
 
 
 

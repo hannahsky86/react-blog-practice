@@ -12,19 +12,13 @@ const Navigation = ({menuOpen, setMenuOpen, isMobile}) => {
             { (!isMobile || menuOpen) &&
                 <ul>
                     <li>
-                        <Link to="/" 
-                              onClick={() => setMenuOpen(navOpen)}
-                        >Home</Link>
+                        <Link to="/" onClick={() => setMenuOpen(navOpen)}>Home</Link>
                     </li>
                     <li>
-                        <Link to="/blog"
-                              onClick={() => setMenuOpen(navOpen)}
-                        >Blog</Link>
+                        <Link to="/blog" onClick={() => setMenuOpen(navOpen)}>Blog</Link>
                     </li>
                     <li>
-                        <Link to="/contact-me" 
-                              onClick={() => setMenuOpen(navOpen)}
-                        >Contact Me</Link>
+                        <Link to="/contact-me" onClick={() => setMenuOpen(navOpen)}>Contact Me</Link>
                     </li>
                 </ul> 
             }  

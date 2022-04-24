@@ -3,9 +3,6 @@ import Navigation from './general/navigation'
 import {useEffect, useState} from "react";
 import Header from "./general/header";
 import {BrowserRouter} from "react-router-dom";
-// import Home from "./pages/home";
-// import Blog from "./pages/blog";
-// import ContactMe from "./pages/contact-me";
 import BuildRoutes from "./general/build-routes";
 import * as Constants from "./general/constants";
 
@@ -40,47 +37,6 @@ function App() {
           </div>
       </div>
 );
-      
-    // <div className="App">
-    
-    {/*    <div className="mobile-nav-button">*/}
-    {/*    {!isDesktop && */}
-    {/*        <button id="menu-button" onClick={() => setDrawerOpen(!drawerOpen)}>*/}
-    {/*            <nav className="main-nav overlay clearfix">*/}
-    {/*                <a className="menu-button icon-menu" href="#">*/}
-    {/*                    <span className="word">Menu</span>*/}
-    {/*                </a>*/}
-    {/*            </nav>*/}
-    {/*        </button>*/}
-    {/*    }*/}
-    {/*    </div>*/}
-    {/*    { drawerOpen && !isDesktop &&*/}
-    {/*        <div className="dropdown-nav">*/}
-    {/*            <Navigation drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen}/>*/}
-    {/*        </div>*/}
-    {/*    }*/}
-    {/*    */}
-    {/*    */}
-    {/*    /!*<Header/>*!/*/}
-    {/*    <div className="desktop-nav">*/}
-    {/*        /!*{isDesktop && *!/*/}
-    {/*        <Navigation drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen}/>*/}
-    {/*        /!*}*!/*/}
-    {/*        <div className="routes">*/}
-    {/*            <BrowserRouter>*/}
-    {/*                <Routes>*/}
-    {/*                    <Route path="/" element={<Home />} />*/}
-    {/*                    <Route path="/blog" element={<Blog />} />*/}
-    {/*                    /!*<Route path="/" element={<Topics />} />*!/*/}
-    {/*                    /!*<Route path="/" element={<Youtube />} />*!/*/}
-    {/*                    /!*<Route path="/" element={<Portfolio />} />*!/*/}
-    {/*                    <Route path="/contact-me" element={<ContactMe />} />*/}
-    {/*                </Routes>*/}
-    {/*            </BrowserRouter>*/}
-    {/*        </div>*/}
-    {/*    </div>*/}
-    {/*</div>*/}
-  // );
 }
 
 

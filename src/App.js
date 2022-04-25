@@ -1,13 +1,27 @@
 import './scss/App.scss';
 import Navigation from './general/navigation'
-import {useEffect, useMemo, useState} from "react";
+import {useEffect, useState} from "react";
 import Header from "./general/header";
 import {BuildRoutes} from "./general/build-routes";
 import * as Constants from "./general/constants";
+import MarkDown from "markdown-to-jsx";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(true);
     const [isMobile, setIsMobile] = useState(window.innerWidth<=Constants.MOBILE_WIN)
+    
+    // const file_name = 'Test1.md';
+    // const [post, setPost] = useState('');
+    //
+    // useEffect(() => {
+    //     import(`./markdown/${file_name}`)
+    //         .then(res => {
+    //             fetch(res.default)
+    //                 .then(res => res.text())
+    //                 .then(res => setPost(res));
+    //         }).catch(err => console.log(err))
+    // })
+    
     
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth<=Constants.MOBILE_WIN);

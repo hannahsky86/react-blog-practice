@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 
 
-
 const Navigation = ({menuOpen, setMenuOpen, isMobile}) => {
     const MOBILE_WIN = 900;
     const navOpen = window.innerWidth >= MOBILE_WIN;

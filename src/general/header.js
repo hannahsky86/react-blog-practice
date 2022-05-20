@@ -4,7 +4,12 @@ export default ({menuOpen, setMenuOpen, isMobile}) => {
         <header className="header">
             {isMobile &&
                 <button onClick={()=>setMenuOpen(!menuOpen)} >
-                    <span>Menu Button</span>
+                    <span>MENU</span>
+                    <div className="ico-menu">
+                        <div className="bar"/>
+                        <div className="bar"/>
+                        <div className="bar"/>
+                    </div>
                 </button>    
             }
             <h1>Hannah's Dev Blog</h1>

@@ -1,23 +1,28 @@
 import {Link} from "react-router-dom";
+import React from "react";
 
 
 const Navigation = ({menuOpen, setMenuOpen, isMobile}) => {
     const MOBILE_WIN = 900;
     const navOpen = window.innerWidth >= MOBILE_WIN;
+    const isNavOpen = (navOpen || menuOpen) ? "nav-open" :"nav-not-open";
     
     return (
-        <header>
+        <header className={`header ${isNavOpen}`}>
             <div id="nav-links" className="navigation">
-            { (navOpen || menuOpen) &&
+                { (navOpen || menuOpen) &&
                 <ul>
+                    <img className="profile-image"
+                         src={require('../images/profile.jpg')} alt="hanzo"/>
+
                     <li>
-                        <Link to="/" onClick={() => setMenuOpen(navOpen)}>Home</Link>
+                        <Link to="/" onClick={() => setMenuOpen(navOpen)}>HOME</Link>
                     </li>
                     <li>
-                        <Link to="/blog" onClick={() => setMenuOpen(navOpen)}>Blog</Link>
+                        <Link to="/blog" onClick={() => setMenuOpen(navOpen)}>BLOG</Link>
                     </li>
                     <li>
-                        <Link to="/contact-me" onClick={() => setMenuOpen(navOpen)}>Contact Me</Link>
+                        <Link to="/contact-me" onClick={() => setMenuOpen(navOpen)}>CONTACT ME</Link>
                     </li>
                 </ul> 
             }  

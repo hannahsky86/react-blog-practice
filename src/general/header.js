@@ -1,8 +1,9 @@
+import React from "react";
 
 export default ({menuOpen, setMenuOpen, isMobile}) => {
     return (
         <header className="header">
-            {isMobile &&
+           {isMobile &&
                 <button onClick={()=>setMenuOpen(!menuOpen)} >
                     <span>MENU</span>
                     <div className="ico-menu">

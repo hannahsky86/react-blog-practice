@@ -14,14 +14,8 @@
     text-align: center;
     background-color: black;
     color:white;
-    //padding: 2rem;
-    //position: absolute;
-    //margin: 0;
-    //left: 0;
-    //right: 0;
-    //top: 0;
-    //z-index: 2;
-
+    padding: 2rem;
+    
     button {
       border-color: transparent;
       background-color: greenyellow;
@@ -31,6 +25,7 @@
       width: 100px;
       position: absolute;
       font-weight: bold;
+      font-size: medium;
     }
   }
 
@@ -39,12 +34,22 @@
     height: 100vh;
     display: flex;
 
-    header {
+    header.header.nav-not-open {
+      background-color: transparent;
+      position: absolute;
+    }
+    
+    header.header.nav-open {
       background-color: greenyellow;
+      position: absolute;
+    }
+
+    .profile-image {
+      height: 11rem;
     }
     
     #nav-links {
-
+      
       ul {
         margin: 1rem;
         padding: 0;
@@ -58,7 +63,7 @@
         }
         
         li > a {
-          font-weight: bold;
+          font-size: medium;
           color: black;
           text-decoration: none;
         }
@@ -70,9 +75,20 @@
     }
 
     div.routes {
-
+      text-align: center;
+      display: flex;
+      margin: 2rem auto;
+      
+      div.page {
+        width: 100%;
+        max-width: 800px;
+        padding: 0 3rem;
+        
+        div.page-body > p {
+          padding-top: 2rem;
+        }
+      }
     }
-
   }
 }
 

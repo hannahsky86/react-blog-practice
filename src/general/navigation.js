@@ -8,7 +8,7 @@ const Navigation = ({menuOpen, setMenuOpen, isMobile}) => {
     return (
         <header>
             <div id="nav-links" className="navigation">
-            { (!isMobile || menuOpen) &&
+            { (navOpen || menuOpen) &&
                 <ul>
                     <li>
                         <Link to="/" onClick={() => setMenuOpen(navOpen)}>Home</Link>

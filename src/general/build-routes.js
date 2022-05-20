@@ -11,7 +11,7 @@ const getRouteArray = (routes) => {
         
         if (!route.category) {
             routes_array.push(
-                <Route key={`test-${route.key}`}  path={route.path} element={<RouteElement/>} />
+                <Route key={`route-${route.key}`} path={route.path} element={<RouteElement/>} />
             )
         }
         if (route.routes) {

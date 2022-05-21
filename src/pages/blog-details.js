@@ -5,13 +5,13 @@ const BlogDetails = ({md_file, expanded}) => {
     const [postContent, setPostcontent] = useState('')
     
     useEffect(() => {
-        import(`../markdown/${md_file}`)
+        import(`../markdown/${md_file.path}`)
             .then(res =>
                 fetch(res.default)
                     .then(response => response.text())
                     .then(response =>
                     {
-                        (expanded) ? 
+                        (expanded.state && expanded.key === md_file.key) ? 
                             setPostcontent(response) :  
                             setPostcontent(response.substring(0,100).concat("..."))
                     }    

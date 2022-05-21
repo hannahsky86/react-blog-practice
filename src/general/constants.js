@@ -1,2 +1,2 @@
-export let MOBILE_WIN = 900;
+export let MOBILE_WIN = 1280;
 

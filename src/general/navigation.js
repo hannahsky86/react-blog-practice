@@ -2,9 +2,8 @@ import {Link} from "react-router-dom";
 import React from "react";
 
 
-const Navigation = ({menuOpen, setMenuOpen, isMobile}) => {
-    const MOBILE_WIN = 900;
-    const navOpen = window.innerWidth >= MOBILE_WIN;
+const Navigation = ({menuOpen, setMenuOpen}) => {
+    const navOpen = window.innerWidth >= 1200;
     const isNavOpen = (navOpen || menuOpen) ? "nav-open" :"nav-not-open";
     
     return (
@@ -12,9 +11,6 @@ const Navigation = ({menuOpen, setMenuOpen, isMobile}) => {
             <div id="nav-links" className="navigation">
                 { (navOpen || menuOpen) &&
                 <ul>
-                    <img className="profile-image"
-                         src={require('../images/profile.jpg')} alt="hanzo"/>
-
                     <li>
                         <Link to="/" onClick={() => setMenuOpen(navOpen)}>HOME</Link>
                     </li>

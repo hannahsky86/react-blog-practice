@@ -1,8 +1,6 @@
 import {Route, Routes} from "react-router-dom";
 import routes from "./routes"
 
-
-
 const getRouteArray = (routes) => {
     let routes_array = []
     

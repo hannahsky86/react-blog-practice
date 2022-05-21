@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export default function ContactMe() {
@@ -14,10 +13,6 @@ export default function ContactMe() {
                 <p>
                     <strong>LinkedIn: </strong> <a href="https://www.linkedin.com/in/hannahsky86/">hannahsky86</a>
                 </p>
-                <p>
-                    {/*<strong>YouTube:</strong> <a href="https://www.youtube.com/channel/UCzo0kyR-JCTQJ_IFT9VTQzg">Hannah Roach</a>*/}
-                </p>
-                
             </div>
         </div>
     )   

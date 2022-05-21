@@ -3,7 +3,6 @@
   height: 100%;
 }
 
-
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -54,7 +53,7 @@
         margin: 1rem;
         padding: 0;
         list-style: none;
-        min-width: 10rem;
+        min-width: 150px;
         height: 100vh;
         z-index:1;
         
@@ -75,19 +74,24 @@
     }
 
     div.routes {
-      text-align: center;
-      display: flex;
-      margin: 2rem auto;
-      
-      div.page {
-        width: 100%;
-        max-width: 800px;
-        padding: 0 3rem;
-        
-        div.page-body > p {
-          padding-top: 2rem;
+      margin: 2rem 2rem;
+    }
+    
+    
+    @media (min-width: 900px) {
+      div.routes {
+        margin: 2rem auto;
+
+        div.page {
+          max-width: 800px;
+          width: 100%;
+          
+          div.page-body > p {
+            padding-top: 2rem;
+            white-space: pre-wrap;
+          }
         }
-      }
+      } 
     }
   }
 }

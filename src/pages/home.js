@@ -9,7 +9,7 @@ export default function Home() {
             </div>
             <div className="page-body">
                 <p>
-                    Thanks for finding my blog! I'll be useing this page to document my journey in life and
+                    Thanks for finding my blog! I'll be using this page to document my journey in life and
                     engineering. 
                 </p>
                 <p>

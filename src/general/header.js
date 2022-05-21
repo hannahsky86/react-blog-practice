@@ -6,11 +6,6 @@ export default ({menuOpen, setMenuOpen, isMobile}) => {
            {isMobile &&
                 <button onClick={()=>setMenuOpen(!menuOpen)} >
                     <span>MENU</span>
-                    <div className="ico-menu">
-                        <div className="bar"/>
-                        <div className="bar"/>
-                        <div className="bar"/>
-                    </div>
                 </button>    
             }
             <h1>Hannah's Dev Blog</h1>

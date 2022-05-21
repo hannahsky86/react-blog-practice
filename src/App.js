@@ -4,27 +4,13 @@ import {useEffect, useState} from "react";
 import Header from "./general/header";
 import {BuildRoutes} from "./general/build-routes";
 import * as Constants from "./general/constants";
-import MarkDown from "markdown-to-jsx";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(true);
     const [isMobile, setIsMobile] = useState(window.innerWidth<=Constants.MOBILE_WIN)
     
-    // const file_name = 'Test1.md';
-    // const [post, setPost] = useState('');
-    //
-    // useEffect(() => {
-    //     import(`./markdown/${file_name}`)
-    //         .then(res => {
-    //             fetch(res.default)
-    //                 .then(res => res.text())
-    //                 .then(res => setPost(res));
-    //         }).catch(err => console.log(err))
-    // })
-    
-    
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth<=Constants.MOBILE_WIN);
+        const handleResize = () => setIsMobile(window.innerWidth<=1200);
         window.addEventListener('resize', handleResize);
 
         (isMobile >= Constants.MOBILE_WIN) ? setMenuOpen(true): setMenuOpen(false);
@@ -39,7 +25,7 @@ function App() {
                   <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} isMobile={isMobile}/>
               </div>
               <div className="body">
-                  <Navigation menuOpen={menuOpen} setMenuOpen={setMenuOpen} isMobile={isMobile}/>
+                  <Navigation menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
                   <BuildRoutes />
               </div>
           </div>

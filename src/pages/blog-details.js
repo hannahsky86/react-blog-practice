@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react"
 import Markdown from "markdown-to-jsx"
-import pages from "../markdown/pages.json";
-
-// import cover from '../assets/img/cover.jpeg'
-// import '../styles/Post.css'
 
 const BlogDetails = ({md_file, expanded}) => {
     const [postContent, setPostcontent] = useState('')
@@ -26,13 +22,9 @@ const BlogDetails = ({md_file, expanded}) => {
 
     return (
         <div className="article-wrapper">
-            {/*<article>*/}
-            {/*    <main>*/}
-                    <Markdown>
-                        {postContent}
-                    </Markdown>
-                {/*</main>*/}
-            {/*</article>*/}
+            <Markdown>
+                {postContent}
+            </Markdown>
         </div>
     )
 }

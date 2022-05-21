@@ -3,6 +3,10 @@
   height: 100%;
 }
 
+body {
+  background-color: whitesmoke;
+}
+
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -30,7 +34,6 @@
 
   .body {
     background-color: whitesmoke;
-    height: 100vh;
     display: flex;
 
     header.header.nav-not-open {
@@ -81,6 +84,8 @@
     @media (min-width: 900px) {
       div.routes {
         margin: 2rem auto;
+        max-width: 800px;
+        width: 100%;
 
         div.page {
           max-width: 800px;

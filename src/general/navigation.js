@@ -17,7 +17,6 @@ const Navigation = ({menuOpen, setMenuOpen}) => {
         })
     })
 
-    
     return (
         <header className={`header ${isNavOpen}`}>
             <div id="nav-links" className="navigation">
@@ -56,9 +55,7 @@ function BlogTagsDropdown ({tag_dict, setMenuOpen, navOpen}) {
     }, [dropdownOpen])
     
     return (
-        // <div className="tags">
-        //     { 
-                Object.entries(tag_dict).map((item) =>
+            Object.entries(tag_dict).map((item) =>
             <li className="tags" key={`dropdown-tag-${item}`}>
                 <Link to="#" onClick={() => {setDropdownOpen({item: item[0], state: !isTagOpen(item)})}}>
                     {item[0]}

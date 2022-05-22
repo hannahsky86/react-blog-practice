@@ -22,7 +22,6 @@ const getRouteArray = (routes) => {
                     <Route key={`route-${route.key}`} path={route.path} element={<RouteElement route={route} />} />
                 )    
             }
-            
         }
         
         if (route.routes) {

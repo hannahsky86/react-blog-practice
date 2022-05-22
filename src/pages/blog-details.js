@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import Markdown from "markdown-to-jsx"
 
 const BlogDetails = ({route, post=""}) => {
-    console.log("TEST PAGE")
     
     const [postContent, setPostcontent] = useState('')
     //
@@ -32,7 +31,6 @@ const BlogDetails = ({route, post=""}) => {
                     .catch(err => console.log(err))
             )
     }, [route, post])
-
     
     return (
         <div className="article-wrapper">

@@ -1,6 +1,7 @@
 import Home from "../pages/home";
 import Blog from "../pages/blog";
 import ContactMe from "../pages/contact-me";
+import BlogDetails from "../pages/blog-details";
 
 export default [
     {
@@ -87,6 +88,15 @@ export default [
         name: "Blog",
         key:"blog",
         element: Blog,
+        routes: 
+        [
+            {
+                path: "/blog/:blogId?",
+                name: "Blog",
+                key:"blog-pages",
+                element: BlogDetails,
+            }
+        ]
     },
     {
         path: "/contact-me",

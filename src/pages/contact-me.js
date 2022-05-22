@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ContactMe() {
+export default function ContactMe({route}) {
     return(
         <div className="page">
             <div className="page-header">

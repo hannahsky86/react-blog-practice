@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Home() {
+export default function Home({route}) {
     return(
         <div className="page">
             <div className="page-header">

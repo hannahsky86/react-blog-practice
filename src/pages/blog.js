@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import pages from "../markdown/pages.json"
 import BlogDetails from "./blog-details";
 
-export default function Blog() {
+export default function Blog({route}) {
     const [expandPage, setExpandPage] = useState({key:null, state:false});
     const scroller = document.querySelector("#blog_post")
 
@@ -16,7 +16,7 @@ export default function Blog() {
             (post, index)=>
             <div id="blog_post" key={`post-${index}`} 
                  onClick={() => setExpandPage({key:pages.posts[index].key, state:!expandPage.state})}>
-                <h1>{pages.posts[index].name}</h1>
+                <h1 className="blog_title">{pages.posts[index].name}</h1>
                 <BlogDetails md_file={pages.posts[index]} expanded={expandPage}/> 
                 <br/>
             </div>

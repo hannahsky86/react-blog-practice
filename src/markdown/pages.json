@@ -5,14 +5,14 @@
       "name":"Test1",
       "path": "Test1.md",
       "date": "4/24/2022",
-      "tags": ["test page"]
+      "tags": ["Arduino"]
     },
     {      
       "key": "test-2",
       "name":"Test2",
       "path": "Test2.md",
       "date": "4/24/2022",
-      "tags": ["test page"]
+      "tags": ["Arduino"]
     },
     {
       "key" : "todo-list",

@@ -33,7 +33,6 @@ const BlogDetails = ({route, post=""}) => {
             )
     }, [route, post])
 
-    console.log("POST", post, postContent)
     
     return (
         <div className="article-wrapper">

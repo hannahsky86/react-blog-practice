@@ -5,17 +5,6 @@ import pages from "../markdown/pages.json"
 const getRouteArray = (routes) => {
     let routes_array = []
     
-    // let new_routes = []
-    //
-    // pages.posts.map((post) => {
-    //     new_routes.push(`/blog/${post.key}`)
-    // })
-    //
-    // console.log("TEST 1", new_routes);
-    // console.log("TEST 2", routes);
-    //
-    // routes = routes.concat(new_routes);
-    //
     routes.forEach(route => {
         const RouteElement = route.element;
         if (!route.category) {
@@ -35,8 +24,6 @@ const getRouteArray = (routes) => {
             }
             
         }
-        
-        console.log("routes_array", routes_array)
         
         if (route.routes) {
             routes_array = routes_array.concat(getRouteArray(route.routes));

@@ -27,14 +27,12 @@ const Navigation = ({menuOpen, setMenuOpen}) => {
                         <Link to="/" onClick={() => setMenuOpen(navOpen)}>HOME</Link>
                     </li>
                     <li>
-                        <span onClick={() => {setHeaderOpen({item: "BLOG", state: !headerOpen.state})}}>BLOG</span>
+                        <Link to="#" className="header" onClick={() => {setHeaderOpen({item: "BLOG", state: !headerOpen.state})}}>BLOG</Link>
                     </li>
-                    <li>
                     {
-                        headerOpen.state && headerOpen.item === "BLOG" && 
-                        <BlogTagsDropdown tag_dict={tag_dict} setMenuOpen={setMenuOpen} navOpen={navOpen} />
+                        (headerOpen.state && headerOpen.item === "BLOG")?  
+                        <BlogTagsDropdown tag_dict={tag_dict} setMenuOpen={setMenuOpen} navOpen={navOpen} />:<></>
                     }
-                    </li>
                     <li>
                         <Link to="/contact-me" onClick={() => setMenuOpen(navOpen)}>CONTACT ME</Link>
                     </li>
@@ -58,20 +56,22 @@ function BlogTagsDropdown ({tag_dict, setMenuOpen, navOpen}) {
     }, [dropdownOpen])
     
     return (
-        Object.entries(tag_dict).map((item) =>
-            <div key={`dropdown-tag-${item}`}>
-                <span onClick={() => {setDropdownOpen({item: item[0], state: !isTagOpen(item)})}}>
+        // <div className="tags">
+        //     { 
+                Object.entries(tag_dict).map((item) =>
+            <li className="tags" key={`dropdown-tag-${item}`}>
+                <Link to="#" onClick={() => {setDropdownOpen({item: item[0], state: !isTagOpen(item)})}}>
                     {item[0]}
-                </span>
+                </Link>
                 { isTagOpen(item) && item[1].map((v) =>
-                    <div key={`tag-${v.key}`}>
-                        <Link key={v.key} to={`/blog/${v.key}`} onClick={() => setMenuOpen(navOpen)}>
+                    <li className="blog-post" key={`tag-list-${v.key}`}>
+                        <Link to={`/blog/${v.key}`} onClick={() => setMenuOpen(navOpen)}>
                             {v.name}
                         </Link>
-                    </div>
+                    </li>
                 )}
-            </div>
-        )
+            </li>
+            )
     )
 }
 

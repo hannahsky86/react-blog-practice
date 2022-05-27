@@ -4,7 +4,7 @@ export default function Home({route}) {
     return(
         <div className="page">
             <div className="page-header">
-                <h1>Hey there...</h1>
+                <h1>Test Hey there...</h1>
             </div>
             <div className="page-body">
                 <p>

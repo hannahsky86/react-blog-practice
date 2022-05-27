@@ -4,7 +4,7 @@ import pages from "../markdown/pages.json";
 
 const Navigation = ({menuOpen, setMenuOpen}) => {
     const [headerOpen, setHeaderOpen] = useState({item: "", state: false})
-    const navOpen = window.innerWidth >= 1200;
+    const navOpen = window.innerWidth >= 1400;
     const isNavOpen = (navOpen || menuOpen) ? "nav-open" :"nav-not-open";
     
     let tag_dict = {}
@@ -22,17 +22,17 @@ const Navigation = ({menuOpen, setMenuOpen}) => {
             <div id="nav-links" className="navigation">
                 { (navOpen || menuOpen) &&
                 <ul>
-                    <li>
-                        <Link to="/" onClick={() => setMenuOpen(navOpen)}>HOME</Link>
+                    <li className="category">
+                        <Link className="category" to="/" onClick={() => setMenuOpen(navOpen)}>HOME</Link>
                     </li>
-                    <li>
-                        <Link to="#" className="header" onClick={() => {setHeaderOpen({item: "BLOG", state: !headerOpen.state})}}>BLOG</Link>
+                    <li className="category">
+                        <Link to="#"  onClick={() => {setHeaderOpen({item: "BLOG", state: !headerOpen.state})}}>BLOG</Link>
                     </li>
                     {
                         (headerOpen.state && headerOpen.item === "BLOG")?  
                         <BlogTagsDropdown tag_dict={tag_dict} setMenuOpen={setMenuOpen} navOpen={navOpen} />:<></>
                     }
-                    <li>
+                    <li className="category">
                         <Link to="/contact-me" onClick={() => setMenuOpen(navOpen)}>CONTACT ME</Link>
                     </li>
                 </ul> 

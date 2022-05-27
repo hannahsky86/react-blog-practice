@@ -4,7 +4,7 @@ export default ({menuOpen, setMenuOpen, isMobile}) => {
     return (
         <header className="header">
            {isMobile &&
-                <button onClick={()=>setMenuOpen(!menuOpen)} >
+                <button className="menu-button" onClick={()=>setMenuOpen(!menuOpen)} >
                     <span>MENU</span>
                 </button>    
             }

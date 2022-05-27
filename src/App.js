@@ -4,13 +4,14 @@ import {useEffect, useState} from "react";
 import Header from "./general/header";
 import {BuildRoutes} from "./general/build-routes";
 import * as Constants from "./general/constants";
+import {MOBILE_WIN} from "./general/constants";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(true);
     const [isMobile, setIsMobile] = useState(window.innerWidth<=Constants.MOBILE_WIN)
     
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth<=1200);
+        const handleResize = () => setIsMobile(window.innerWidth<=MOBILE_WIN);
         window.addEventListener('resize', handleResize);
 
         (isMobile >= Constants.MOBILE_WIN) ? setMenuOpen(true): setMenuOpen(false);

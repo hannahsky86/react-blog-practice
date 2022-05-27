@@ -11,6 +11,9 @@ body {
   background-color: whitesmoke;
 }
 
+$dark-background: #050800;
+$greenyellow: greenyellow; 
+
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -19,107 +22,97 @@ body {
     justify-content: center;
     align-content: center;
     text-align: center;
-    background-color: black;
-    color:white;
+    background-color: $dark-background;
+    color: whitesmoke;
     padding: 2rem;
-    
-    button {
-      border-color: transparent;
-      background-color: greenyellow;
-      left: 0;
-      top: 0;
-      height: 50px;
-      width: 100px;
-      position: absolute;
-      font-weight: bold;
-      font-size: medium;
-    }
   }
 
   .body {
     background-color: whitesmoke;
     display: flex;
+  }
+}
 
-    header.header.nav-not-open {
-      background-color: transparent;
-      position: absolute;
-    }
-    
-    header.header.nav-open {
-      background-color: greenyellow;
-      position: absolute;
-      max-width: 20rem;
+button.menu-button {
+  border-color: transparent;
+  background-color: greenyellow;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  font-weight: bold;
+  font-size: medium;
+}
+
+header.header.nav-not-open {
+  background-color: transparent;
+  position: absolute;
+}
+
+header.header.nav-open {
+  background-color: greenyellow;
+  position: absolute;
+  max-width: 17rem;
+  width: 100%;
+}
+
+div.routes {
+  margin: 2rem 2rem;
+}
+
+@media (min-width: 900px) {
+  div.routes {
+    margin: 2rem auto;
+    max-width: 800px;
+    width: 100%;
+
+    div.page {
+      max-width: 800px;
       width: 100%;
-    }
 
-    .profile-image {
-      height: 11rem;
-    }
-    
-    #nav-links {
-      
-      ul {
-        margin: 1rem;
-        padding: 0;
-        list-style: none;
-        min-width: 150px;
-        height: 100vh;
-        z-index:1;
-        
-        li {
-          padding: 1rem;
-          font-weight: bold;
-        }
-        
-        li.tags {
-          padding: 0.25rem;
-          margin-left: 1.5rem;
-          font-weight: normal;
-        }
-        
-        li.blog-post {
-          list-style-type: square;
-          padding: 0.5rem 0 0 0;
-          margin-left: 1.5rem;
-          font-weight: normal;
-        }
-        
-        li > a {
-          font-size: medium;
-          color: black;
-          text-decoration: none;
-        }
-        
-        li > a:hover {
-          color: blue;
-        }
+      div.page-body > p {
+        padding-top: 2rem;
+        white-space: pre-wrap;
       }
-    }
-
-    div.routes {
-      margin: 2rem 2rem;
-    }
-    
-    
-    @media (min-width: 900px) {
-      div.routes {
-        margin: 2rem auto;
-        max-width: 800px;
-        width: 100%;
-
-        div.page {
-          max-width: 800px;
-          width: 100%;
-          
-          div.page-body > p {
-            padding-top: 2rem;
-            white-space: pre-wrap;
-          }
-        }
-      } 
     }
   }
 }
+
+
+ul {
+  padding: 0;
+  list-style: none;
+  height: 100vh;
+  z-index:1;
+}
+
+li {
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+}
+
+li.tags {
+  padding: .5rem 2.5rem;
+}
+
+li.blog-post {
+  list-style-type: square;
+  padding: 0.5rem 0 0 0;
+  margin-left: 1.5rem;
+  font-weight: normal;
+}
+
+li > a {
+  font-size: medium;
+  color: $dark-background;
+  text-decoration: none;
+}
+
+li > a:hover {
+  color: blue;
+}
+
 
 
 #blog_post {
@@ -137,6 +130,7 @@ body {
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   }
+  
   div.article-wrapper {
     padding: 1rem 2rem 1rem 2rem;
   }

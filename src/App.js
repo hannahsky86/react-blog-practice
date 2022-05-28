@@ -6,6 +6,7 @@ import {BuildRoutes} from "./general/build-routes";
 import * as Constants from "./general/constants";
 import {MOBILE_WIN} from "./general/constants";
 
+
 function App() {
     const [menuOpen, setMenuOpen] = useState(true);
     const [isMobile, setIsMobile] = useState(window.innerWidth<=Constants.MOBILE_WIN)

@@ -1,11 +1,13 @@
 import React from "react";
+import { BsList } from "react-icons/bs";
+
 
 export default ({menuOpen, setMenuOpen, isMobile}) => {
     return (
         <header className="header">
            {isMobile &&
                 <button className="menu-button" onClick={()=>setMenuOpen(!menuOpen)} >
-                    <span>MENU</span>
+                    <BsList/>
                 </button>    
             }
             <h1>Hannah's Dev Blog</h1>

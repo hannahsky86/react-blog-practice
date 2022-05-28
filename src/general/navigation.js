@@ -1,10 +1,12 @@
 import {Link} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import pages from "../markdown/pages.json";
+import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
+import {MOBILE_WIN} from "./constants";
 
 const Navigation = ({menuOpen, setMenuOpen}) => {
     const [headerOpen, setHeaderOpen] = useState({item: "", state: false})
-    const navOpen = window.innerWidth >= 1400;
+    const navOpen = window.innerWidth >= MOBILE_WIN;
     const isNavOpen = (navOpen || menuOpen) ? "nav-open" :"nav-not-open";
     
     let tag_dict = {}
@@ -58,6 +60,7 @@ function BlogTagsDropdown ({tag_dict, setMenuOpen, navOpen}) {
             Object.entries(tag_dict).map((item) =>
             <li className="tags" key={`dropdown-tag-${item}`}>
                 <Link to="#" onClick={() => {setDropdownOpen({item: item[0], state: !isTagOpen(item)})}}>
+                    {isTagOpen(item) ? <AiFillCaretDown/> :<AiFillCaretRight/>}
                     {item[0]}
                 </Link>
                 { isTagOpen(item) && item[1].map((v) =>

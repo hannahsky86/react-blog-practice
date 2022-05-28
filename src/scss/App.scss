@@ -11,8 +11,9 @@ body {
   background-color: whitesmoke;
 }
 
-$dark-background: #050800;
+$dark-background: black;
 $greenyellow: greenyellow; 
+
 
 .flex-container {
   display: flex;
@@ -35,7 +36,7 @@ $greenyellow: greenyellow;
 
 button.menu-button {
   border-color: transparent;
-  background-color: greenyellow;
+  background-color: $greenyellow;
   left: 0;
   top: 0;
   height: 50px;
@@ -43,6 +44,11 @@ button.menu-button {
   position: absolute;
   font-weight: bold;
   font-size: medium;
+  
+  svg {
+    padding-right: .5rem;
+    font-size: x-large;
+  }
 }
 
 header.header.nav-not-open {
@@ -51,7 +57,7 @@ header.header.nav-not-open {
 }
 
 header.header.nav-open {
-  background-color: greenyellow;
+  background-color: $greenyellow;
   position: absolute;
   max-width: 17rem;
   width: 100%;
@@ -59,6 +65,11 @@ header.header.nav-open {
 
 div.routes {
   margin: 2rem 2rem;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
 }
 
 @media (min-width: 900px) {
@@ -94,12 +105,15 @@ li {
 
 li.tags {
   padding: .5rem 2.5rem;
+  
+  a > svg {
+    padding-right: 1rem;
+  }
 }
 
 li.blog-post {
-  list-style-type: square;
   padding: 0.5rem 0 0 0;
-  margin-left: 1.5rem;
+  margin-left: .5rem;
   font-weight: normal;
 }
 
@@ -138,3 +152,48 @@ li > a:hover {
 
 
 
+/* Set a specific color for each brand */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+/* Facebook */
+.fa-linkedin {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-github{
+  background: #55ACEE;
+  color: white;
+}
+
+/* Youtube */
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+
+.social-links {
+  padding: 1rem;
+}
+
+.social-icon {
+  margin: 1rem;
+}
+
+
+//TODO: sort into scss dirs

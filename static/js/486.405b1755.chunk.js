@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhanzo_code=self.webpackChunkhanzo_code||[]).push([[486],{486:function(e,c,a){e.exports=a.p+"static/media/4-25-2022.b07dbd5bc22f87e18a49.md"}}]);

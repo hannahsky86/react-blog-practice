@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 import routes from "./routes"
 import pages from "../markdown/pages.json"
+import Home from "../pages/home";
 
 const getRouteArray = (routes) => {
     let routes_array = []
@@ -36,7 +37,8 @@ export function BuildRoutes() {
 
     return(
         <div className="routes">
-            <Routes> {getRouteArray(routes)} </Routes>            
+            <Routes> {getRouteArray(routes)} </Routes>
+            <Route component={Home} key="route-not-found" />
         </div>
     );
 }

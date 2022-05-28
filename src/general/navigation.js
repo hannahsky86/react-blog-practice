@@ -25,7 +25,7 @@ const Navigation = ({menuOpen, setMenuOpen}) => {
                 { (navOpen || menuOpen) &&
                 <ul>
                     <li className="category">
-                        <Link className="category" to="/home" onClick={() => setMenuOpen(navOpen)}>HOME</Link>
+                        <Link className="category" to="/" onClick={() => setMenuOpen(navOpen)}>HOME</Link>
                     </li>
                     <li className="category">
                         <Link to="#"  onClick={() => {setHeaderOpen({item: "BLOG", state: !headerOpen.state})}}>BLOG</Link>

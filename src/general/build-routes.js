@@ -38,7 +38,7 @@ export function BuildRoutes() {
     return(
         <div className="routes">
             <Routes> {getRouteArray(routes)} </Routes>
-            <Route component={Home} key="route-not-found" />
+            {/*<Route component={Home} key="route-not-found" />*/}
         </div>
     );
 }

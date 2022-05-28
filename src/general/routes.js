@@ -7,7 +7,14 @@ export default [
     {
         path: "/",
         name: "Home",
-        key:"home",
+        key: "home",
+        exact: true,
+        element: Home
+    },
+    {
+        path: "/react-blog-practice",
+        name: "Home2",
+        key: "react-blog-practice",
         exact: true,
         element: Home
     },

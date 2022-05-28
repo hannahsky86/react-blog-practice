@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhanzo_code=self.webpackChunkhanzo_code||[]).push([[973],{973:function(e,a,c){e.exports=c.p+"static/media/2019-10-10.ab920052b327d21a1b80.md"}}]);
